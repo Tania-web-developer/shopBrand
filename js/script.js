@@ -192,17 +192,7 @@ const shop = {
     // home, 
 
     init() {
-        this.catalog.init(this.data.getData());
-        // this.catalog.productsList.addEventListener('click', (e) => {
-        //     const target = e.target;
-        //     if (target.classList.contains('add-cart')) {
-        //         const parent = target.closest('.catalog-card');
-        //         console.log(parent);
-        //         this.cart.addToCart(parent);
-        //         this.cart.init();
-        //     }
-        // });
-
+        this.catalog.init(this.data.getData());        
     },
 
     setEventHandlers() {
