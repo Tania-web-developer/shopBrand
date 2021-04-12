@@ -1,0 +1,150 @@
+.header
+    @extend %center    
+    background-color: $header-bg 
+    color: white
+    width: 100% 
+    position: fixed 
+    z-index: 300
+    transition: .5s    
+
+.main-header
+    @extend %center 
+    background: $main-bg-color
+    transition: .5s
+    
+.main-header-container    
+    display: flex
+    justify-content: space-between   
+    padding: 8rem  0 3.6rem 0  
+    transition: .5s
+    @include break(950px)
+        margin-left: 1rem
+        margin-right: 1rem
+    @include break(640px)
+        flex-direction: column
+        align-items: center 
+        justify-content: center
+        padding: 6rem  0 3.6rem 0
+        margin: 0
+    .main-title
+        transition: .5s
+        @include break(640px)
+            margin: 2rem 0      
+        h1
+            color: $accent
+            font-size: 1.5rem
+            font-weight: 400
+    .breadcrumb
+        display: flex
+        margin: auto 0
+        text-transform: uppercase
+        color: #636363
+        a
+            &:hover
+                color: $accent
+        @include break(490px)
+            h5
+                font-size: .8rem
+    
+        
+     
+.nav
+    display: flex 
+    position: relative    
+    justify-content: space-between 
+    align-items: center 
+    padding: 1rem 0
+    transition: .5s  
+    @include break(950px) 
+        padding-left: 1rem 
+        padding-right: 1rem    
+    &-right
+        display: flex         
+    &-btn
+       @extend %btn-icon
+       @include styleIcon(white, $hover)
+      
+.badge
+    position: absolute
+    right: -5px;
+    top: -2px;
+    border-radius: 50%
+    background: #F16D7F
+    font-size: .6rem
+    font-weight: 400
+    width: .95rem
+    text-align: center
+    padding: .14rem 0
+    color: white
+    &::after
+        content: "5"
+
+
+   
+
+.menu
+    position: relative    
+    background: white
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    width: 14.5rem  
+    padding: 2rem
+    position: relative 
+    transition: 1s
+    animation: show .5s linear    
+    &-close-btn 
+        position: absolute
+        right: 10px
+        top: 10px
+    &-list
+        padding: .5rem 0
+    &-dropdown-list
+        padding-left: 1rem
+        margin: .6rem 0 
+    &-dropdown-item
+        padding: .3rem 0        
+    &-title        
+        font-weight: 700
+        color: black
+    &-link
+        color: #6F6E6E;
+        font-size: .9rem
+        &:hover
+            color: $accent
+
+
+
+
+.modal-fade   
+    position: fixed
+    background: rgba(0, 0, 0, 0.5)
+    left: 0
+    right: 0
+    top: 4.5rem      
+    justify-content: flex-end
+    height: 100vh
+    display: none  
+    z-index: 200
+    transition: 1s
+    &-open
+        display: flex
+
+.collapse-btn
+    position: absolute
+    top: 15px;
+    right: 2px;
+    
+
+.brand-1 
+    animation: brand_animation 1.7s linear
+    @include break(950px)
+        animation: none
+          
+    &:hover
+        transform: scale(1.2)
+
+    
+           
+
+@include break(768px)
+    .login-i, .cart-i
+        display: none

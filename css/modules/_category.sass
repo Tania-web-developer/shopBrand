@@ -1,0 +1,97 @@
+.category
+    @extend %center
+    &-container
+        display: flex 
+        flex-wrap: wrap 
+        justify-content: space-between 
+        margin-bottom: 4rem
+        @include break(950px) 
+            padding: 0 .6rem 
+        @include break(768px) 
+            padding: 0 .8rem 
+        @include break(760px)
+            display: flex
+            flex-direction: column
+            align-items: center
+            flex: 3          
+    &-item
+        display: flex
+        position: relative 
+        margin-bottom: 1.8rem 
+        padding: 6.6rem 0 
+        max-width: 31.6%
+        flex: 1
+        transition: all 1s
+        @include break(1200px) 
+            margin-bottom: 1.6rem
+            padding: 4.6rem 0
+        @include break(950px) 
+            margin-bottom: 1.2rem
+            padding: 3.4rem 0
+        @include break(760px)            
+            min-width: 30rem            
+            padding: 9rem 0
+        @include break(650px)            
+            min-width: 21.5rem            
+            padding: 5.8rem 0                      
+        svg 
+            height: 80%
+            left: 10%
+            position: absolute
+            top: 10%
+            bottom: 0
+            right: 0
+            width: 80%
+        rect            
+            stroke: #363535
+            stroke-width: 2            
+            stroke-dasharray: 15, 310
+            stroke-dashoffset: 48
+            transition: transform .5s all 1.35s cubic-bezier(0.19, 1, 0.22, 1)             
+        &:nth-child(2)
+            @include backImage("../img/women.jpg") 
+        &:nth-child(3)
+            @include backImage("../img/men.jpg")
+        &:nth-child(4)
+            @include backImage("../img/kids.jpg")
+        &:nth-child(5)
+            flex: 3 
+            min-width: 100% 
+            @include backImage("../img/accessories.jpg")
+            @include break(760px)                       
+                padding: 2rem 0 
+                min-width: 30rem  
+            @include break(650px)                       
+                padding: 1.6rem 0
+                min-width: 21.5rem  
+                                
+        &-header
+            text-align: center 
+            margin-left: auto 
+            margin-right: auto
+            color: white 
+        &-title
+            color: white  
+            span
+                color: $accent 
+                font-weight: 700 
+                font-size: 1.5rem 
+                line-height: 1.6
+                @include break(760px)                       
+                    font-size: 1.8rem               
+        &:hover       
+            filter: saturate(200%) 
+            box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset
+            rect
+                fill: none
+                stroke-width: 3
+                stroke: white
+                stroke-dasharray: 422, 0
+                transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1)
+                transition: all 0.35s linear  
+        &:active
+            transform: translateY(4px)
+        
+            
+            
+  

@@ -1,0 +1,37 @@
+.footer
+    background: $dark-grey
+    @extend %center     
+    &-container
+        display: flex 
+        justify-content: space-between 
+        align-items: center 
+        padding: 1.5rem 0
+        transition: .5s
+        @include break(950px) 
+            padding-left: 1rem 
+            padding-right: 1rem 
+        @include break(650px) 
+            flex-direction: column-reverse
+            padding: 1rem 0            
+    &-rights
+        font-weight: 400 
+        font-size: 1rem 
+        color: #FBFBFB 
+        margin: 0 
+    &-social
+        @include break(650px)             
+            margin: 2.5rem  0       
+    &-icon                       
+        background: #FBFBFB        
+        padding: .5rem
+        margin-right: .3rem 
+        width: 2rem
+        height: 2rem  
+        font-size: 1rem;                
+        text-align: center 
+        cursor: pointer 
+        color: black
+        &:hover
+            background: $accent 
+            color: white
+            animation: pulse .5s infinite 

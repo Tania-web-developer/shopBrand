@@ -1,0 +1,19 @@
+@mixin backImage($image) 
+    background: #222224 url($image) center/cover no-repeat 
+
+
+@mixin headers($weight: 400, $size: .8rem)
+    text-transform: uppercase
+    margin: 0
+    font-weight: $weight 
+    font-size: $size   
+
+@mixin styleIcon($color,$hover)
+    fill: $color
+    &:hover
+        fill: $hover
+
+
+@mixin break($length)    
+    @media (max-width: $length)  
+        @content 

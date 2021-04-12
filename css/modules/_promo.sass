@@ -1,0 +1,65 @@
+.promo
+    @extend %center 
+    background-color: #F1E4E6 
+    padding-top: 4.5rem 
+    transition: .5s           
+    img
+        display: block
+        transition: .5s
+        @include break(950px)
+            max-width: 62%
+            margin-left: 4rem 
+        @include break(768px)
+            display: none      
+    &-container
+        display: flex 
+        align-items: center         
+        margin-bottom: 4rem 
+        transition: .5s 
+        @include break(768px)
+            padding: 9.3rem 0
+            justify-content: center
+    &-item
+        display: block 
+        min-width: 54%
+        transition: .5s 
+        @include break(950px)
+            max-width: 54%
+        @include break(768px)
+            display: none
+              
+    &-caption
+        border-left: solid #F16D7F 12px 
+        padding: .3rem 0 .3rem .8rem 
+        line-height: 0.9
+        animation: promo_caption 3s  1
+        @include break(950px)
+            
+            h1
+                font-size: 2.8rem 
+        @include break(400px)
+            h1
+                font-size: 2.3rem
+    span
+        font-size: 2rem 
+        font-weight: 700
+        @include break(950px)           
+            font-size: 1.5rem
+        @include break(400px)           
+            font-size: 1.3rem    
+    span:nth-child(3)
+        color: #F16D7F  
+
+    .promo-brand        
+        position: absolute
+        opacity: 0 
+        width: 250px
+        height: 150px
+        background: url("../img/brand_bg.svg") center/contain no-repeat 
+        animation: promo_brand 2s 1
+        @include break(950px)
+            animation: none
+       
+           
+             
+        

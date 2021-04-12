@@ -1,0 +1,141 @@
+@keyframes touch
+    0% 
+        transform: scale(.99)            
+    100%    
+       transform: scale(1)
+       
+@keyframes pulse
+    0% 
+        transform: scale(1.05)
+    50% 
+        transform: scale(.95)      
+    100%    
+       transform: scale(1)   
+
+    
+@keyframes addToCart
+    0% 
+        transform: translateY(-300px) scale(.2)      
+       
+    100%    
+       transform: translateY(0px) scale(1) 
+
+
+
+@keyframes show
+    0%   
+        opacity: 0
+        height: 50%      
+        transform: translateZ(400px) translateX(-400px) 
+        transition: 1s      
+    30% 
+        opacity: 0.5
+        height: 100%        
+        transform: translateZ(-10px) 
+        transition: 1s
+    100% 
+        transition: .5s        
+        transform: translateZ(0px) transLateX(0px)
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        
+@for $i from 1 through 6 
+    .catalog-list   
+        &:nth-child(#{$i})     
+            animation-delay: $i * (1s / 12);
+    
+      
+@keyframes showFilter
+    0%   
+        opacity: 0.5
+        height: 50%      
+        transform: translateZ(400px) translateX(-400px) 
+        transition: 1s      
+    30% 
+        
+        height: 100%        
+        transform: translateZ(-10px) 
+        transition: 1s
+    100% 
+        transition: .5s        
+        transform: translateZ(0px) transLateX(0px)
+
+@keyframes showSmallFilter
+    0%   
+          
+        transform: translateZ(400px) translateX(-400px) 
+        transition: 1s      
+    30% 
+        
+            
+        transform: translateZ(-10px) 
+        transition: 1s
+    100% 
+        transition: .5s        
+        transform: translateZ(0px) transLateX(0px)
+        
+             
+		
+       
+@keyframes promo_caption
+    0%         
+        opacity: 0
+        
+        transform: scale(0) rotate(960deg)                     
+    
+    30% 
+        opacity: 1
+        transform:  scale(1) 
+             
+    100% 
+        opacity: 1
+               
+          
+
+
+@keyframes promo_brand
+    0%  
+        left: 50%       
+        opacity: 1       
+        transform:  scale(3)                  
+    
+    20% 
+        left: 50%  
+        opacity: 1        
+        transform: scale(2) rotate(360deg)
+
+    60% 
+        opacity: 1 
+        transform: scale(2)  rotate(360deg)
+
+    90%
+        left: 50% 
+        opacity: .5           
+        transform: translate(-680px, -420px) scale(.4)
+    100%
+        left: 50% 
+        opacity: 0           
+        transform: translate(-680px, -420px) scale(.1)
+    
+
+
+@keyframes brand_animation
+    0%  
+        opacity: 0
+    99%
+        opacity: 0
+    100%
+        opacity: 0
+    
+    
+   
+        
+        
+       
+       
+
+
+
+
+
+
+

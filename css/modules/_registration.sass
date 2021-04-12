@@ -1,0 +1,130 @@
+.registration
+    @extend %center 
+    transition: .5s
+    &-container
+        @include break(950px) 
+            padding: 0 .6rem 
+        @include break(768px) 
+            padding: 0 .8rem  
+    &-items
+        +flexAlign(row, space-between, flex-start)
+        flex-basis: 50%
+        transition: .5s
+        @include break(760px) 
+            +flexAlign(column, center, center)           
+    &-form
+        max-width: 360px
+        @include break(1200px)
+            min-width: 360px  
+        @extend %form 
+        h3
+            font-size: 1rem
+            font-weight: 300
+            margin-bottom: 1rem
+            text-transform: capitalize            
+        p
+            font-size: .8rem
+            color: #B1B1B1
+        &-details
+            margin-bottom: 2.2rem         
+    &-form-question 
+        max-width: 40%        
+        margin-bottom: 2rem 
+        transition: .5s      
+        +flexAlign(row, space-between, center)
+        input
+            display: none
+    &-btn  
+        @extend %btn
+        font-size: .9rem
+        text-transform: uppercase
+        background: $accent
+        color: white
+        padding: 1rem 1.5rem
+        fill: white
+        &:hover
+            background: white
+            color: $accent
+            fill: $accent
+        svg            
+            margin-left: .8rem
+    &-benefits
+        padding: 1rem 2rem 0 8rem
+        transition: .5s
+        @include break(1200px)
+            padding: 1rem 0rem 0 3rem             
+        h3
+            font-weight: 300
+            margin-bottom: 1rem
+        @include break(760px)
+            padding: 1rem 1rem 1rem 2rem
+        @include break(465px)
+            padding: 1rem 
+        @include break(422px)
+            padding: 1rem .5rem 2rem .5rem 
+    &-text 
+        font-size: 1.5rem 
+        color: black
+        line-height: 1.3
+        @include break(1200px)
+            font-size: 1rem 
+
+    ul
+        font-size: 1.5rem 
+        font-weight: 300
+        color: black
+        padding: 0 
+        transition: .5s         
+        li
+            padding: .5rem  0
+            display: flex
+            @include break(1200px)
+                font-size: 1rem
+                padding: 1rem            
+            &::before
+                content: " "                
+                display: inline-block
+                position: relative                
+                margin: 0 1rem 0 0                
+                width: 20px
+                height: 16px               
+                background: url("../img/check.svg") center/cover no-repeat 
+                  
+
+.radio-item 
+    +flexAlign(row, space-between, center)
+    position: relative    
+    label 
+        color: black
+        font-weight: 300
+        font-size: .6rem
+        &:hover
+            color: $accent    
+        &:before 
+            content: " "
+            display: inline-block
+            position: relative
+            top: 5px
+            margin: 0 .5rem 0 0
+            width: 18px
+            height: 18px
+            border-radius: 50%
+            border: 1px solid #A4A4A4
+            background-color: transparent
+    
+
+.radio-item input[type=radio]:checked + label:after 
+    border-radius: 11px
+    width: 12px
+    height: 12px
+    position: absolute
+    top: 9px;
+    left: 4px;
+    content: " "
+    display: block
+    background: $accent
+  
+
+
+
+   
