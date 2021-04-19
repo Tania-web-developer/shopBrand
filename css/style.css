@@ -1345,6 +1345,9 @@ details summary:focus {
 
 .catalog-list img {
   display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-height: 24.34rem;
 }
 
 @media (max-width: 1200px) {

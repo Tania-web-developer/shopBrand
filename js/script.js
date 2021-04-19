@@ -101,10 +101,11 @@ const data = {
     }
 };
 
+
 const product = {
     card: null,
     init(productObj) {
-        const cardElem = document.querySelector("#card").content.cloneNode(true);
+        const cardElem = document.querySelector("#template").content.cloneNode(true);
         cardElem.querySelector("#price").innerHTML = productObj.price;
         cardElem.querySelector("img").src = productObj.src;
         cardElem.querySelector("#name").innerHTML = productObj.name;
@@ -192,17 +193,7 @@ const shop = {
     // home, 
 
     init() {
-        this.catalog.init(this.data.getData());
-        // this.catalog.productsList.addEventListener('click', (e) => {
-        //     const target = e.target;
-        //     if (target.classList.contains('add-cart')) {
-        //         const parent = target.closest('.catalog-card');
-        //         console.log(parent);
-        //         this.cart.addToCart(parent);
-        //         this.cart.init();
-        //     }
-        // });
-
+        this.catalog.init(this.data.getData());        
     },
 
     setEventHandlers() {

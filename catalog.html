@@ -5,8 +5,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Brand Shop</title>  
-  <script defer src="./js/script.js"></script>
-  <!-- <script src="https://kit.fontawesome.com/a89222e4f4.js" crossorigin="anonymous"></script> -->
+  <script src="./js/Content.js"></script>
+  <script src="./js/RequestMaker.js"></script>
+  <script src="./js/Product.js"></script>
+  <script src="./js/Catalog.js"></script>
+  <script src="./js/CartProduct.js"></script>
+  <script src="./js/Cart.js"></script>
+  <script src="https://kit.fontawesome.com/a89222e4f4.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="css/normalize.css">
@@ -156,7 +161,6 @@
     </section>
     <section class="catalog">
       <div class="catalog-container container">
-
         <div class="catalog-card filter">
           <details class="main-filter">
             <summary class="main-filter-header">
@@ -280,9 +284,11 @@
         </div>
         <div class="catalog-card filter">
         </div>
-        <div id='catalog_list' class="catalog-list">
-         
+        <div id="add_container" class="catalog-list">
+          
         </div>
+        <div id='total'></div>
+        
         <div class="pagination">
           <ul class="pagination-container">
             <li class="pagination-item"><a href="#" class="page-link"><i class="fas fa-chevron-left"></i></a></li>
@@ -303,7 +309,6 @@
     </section>
 
   </main>
-
   <aside>
     <section class="advantages">
       <div class="advantages-container container">
@@ -368,7 +373,6 @@
       </div>
     </section>
   </aside>
-
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-rights">
@@ -382,11 +386,11 @@
       </div>
     </div>
   </footer>
-  <template id="card">
-    <div class="catalog-card" id="first">
+  <template id="template">
+    <div class="catalog-card" id="new_product">
       <img>
       <div class="add-cart">
-        <button  id="add_cart_btn" class="btn add-cart-btn">
+        <button id="add_cart_btn" class="btn add-cart-btn">
           <svg class="product-btn-icon" role="img" aria-label="Cart" width="24" height="26" viewBox="0 0 32 29"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -400,11 +404,13 @@
           Australian arbiter of cool Kym Ellery teams up
           with Moda Operandi.
         </p>
-        <p id="price"  class="price">52.00</p>
+        <p id="price" class="price">52.00</p>
       </div>
     </div>
-  </template> 
-
+  </template>
+  <script>
+    Content.Init(document.body);     
+  </script>
 </body>
 
 </html>
