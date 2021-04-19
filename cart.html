@@ -5,7 +5,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Brand Shop</title>  
-  <script defer src="./js/script.js"></script>
+  <script src="./js/Content.js"></script>
+  <script src="./js/RequestMaker.js"></script>
+  <script src="./js/Product.js"></script>
+  <script src="./js/Catalog.js"></script>
+  <script src="./js/CartProduct.js"></script>
+  <script src="./js/Cart.js"></script>
   <!-- <script defer src="https://kit.fontawesome.com/a89222e4f4.js" crossorigin="anonymous"></script> -->
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
@@ -147,13 +152,12 @@
     <section class="cart">
       <div class="cart-container container">
         <div class="cart-items">
-          <section class="cart-list">            
-            
+          <div id="add_container">
             <div class="btn-section divider-bottom">
               <button class="card-product-btn"><span>C</span>LEAR SHOPPING CART</button>
               <button class="card-product-btn"><span>C</span>LEAR SHOPPING CART</button>
             </div>
-          </section>
+          </div>
           <section class="cart-info">
             <div class="cart-form">
               <h4>SHIPPING ADDRESS</h4>
@@ -177,7 +181,6 @@
       </div>
     </section>
   </main>
-
   <aside>
     <section class="feedback">
       <div class="wrap">
@@ -207,7 +210,6 @@
       </div>
     </section>
   </aside>
-
   <footer class="footer">
     <div class="footer-container">
       <div class="footer-rights">
@@ -221,8 +223,8 @@
       </div>
     </div>
   </footer>
-  <template id="product_cart">
-    <div id="cart_product" class="cart-product">
+  <template id="template">
+    <div id="newElementDiv" class="cart-product">
       <button class="cart-btn">
         <svg class="cart-btn-icon" role="img" aria-label="close" width="13" height="13" viewBox="0 0 13 13"
           xmlns="http://www.w3.org/2000/svg">
@@ -232,7 +234,7 @@
       </button>
       <picture>
         <!-- <source srcset="./img/cart_small.jpg" media="(max-width: 640px)"> -->
-        <img class="product_img"/>
+        <img class="product_img" />
       </picture>
       <div class="cart-product-description">
         <h4 id="product_name" class="cart-product-header">MANGO PEOPLE <br>T-SHIRT</h4>
@@ -246,8 +248,9 @@
       </div>
     </div>
   </template>
-  <script src="./js/script.js"></script>
-
+  <script>
+    
+  </script>
 </body>
 
 </html>
